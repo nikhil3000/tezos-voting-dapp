@@ -18,7 +18,7 @@ function loadData() {
   eztz.contract.watch(contractAddress, 2, function(s){
     console.log("New storage", s);
     var candidateList = s.args[0];
-    for (var i=1; i<= candidateList.length; i++) {
+    for (var i=0; i<= candidateList.length; ++i) {
       $("#candidate-" + i).html(candidateList[i-1].args[1].int); 
     }
     $("#msg").html("");
